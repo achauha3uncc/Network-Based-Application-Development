@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <title>
+        Update Connections
+    </title>
+</head>
+
+<body>
+    <%- include('../partials/header.ejs')%>
+    <%- include('../partials/nav.ejs')%>
+    <%- include('../partials/message.ejs')%>
+    <form action="/connections/<%=data._id%>?_method=PUT" method="POST">
+        <label for="title">Connection Name</label><br>
+        <input type="text" value="<%=data.title%>" id="title" name="title"><br><br>
+        <label for="category">Category</label><br>
+        <input type="text" value="<%=data.category%>" id="category" name="category"><br><br>
+        <label for="details">Details</label><br>
+        <textarea id="details" name="details" rows="3" columns="40"><%=data.details%></textarea><br><br>
+        <label for="date">date</label><br>
+        <input type="date" value="<%=data.date%>" id="date" name="date"><br><br>
+        <label for="startingTime">startingTime</label><br>
+        <input type="time" value="<%=data.startingTime%>" id="startingTime" name="startingTime"><br><br>
+        <label for="endingTime">endingTime</label><br>
+        <input type="time" value="<%=data.endingTime%>" id="endingTime" name="endingTime"><br><br>
+        <label for="location">Location</label><br>
+        <input type="text" value="<%=data.location%>" id="location" name="location"><br><br>
+        <label for="host">Host</label><br>
+        <input type="text" value="<%=data.host.firstName%>" id="host" name="host"><br><br>
+        <label for="imageURL">Image URL</label><br>
+        <input type="text" value="<%=data.imageURL%>" id="imageURL" name="imageURL"><br><br>
+        <button>Submit</button><br>
+    </form>
+    </div>
+    <%- include('../partials/footer.ejs')%>
+</body>
+
+</html>

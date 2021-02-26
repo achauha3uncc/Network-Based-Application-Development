@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <title>
+        Login
+    </title>
+</head>
+
+<body>
+    <%- include('../partials/header.ejs')%>
+    <%- include('../partials/nav.ejs')%>
+    <%- include('../partials/message.ejs')%>
+            <form action="/users/login" method="POST">
+                <label for="email">Email</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="password">Password</label><br>
+                <input type="password" id="password" name="password"><br><br>
+                <button>Login</button><br>
+            </form>
+    <%- include('../partials/footer.ejs')%>
+</body>
+</html>

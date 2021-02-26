@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <title>
+        Profile
+    </title>
+</head>
+
+<body>
+    <%- include('../partials/header.ejs')%>
+    <%- include('../partials/nav.ejs')%>
+    <%- include('../partials/message.ejs')%>
+    <main>
+        <h3>Welcome
+            <%= user.name%>, here are your connections as well as RSVP Details.
+        </h3>
+        <% if(created.length > 0) {%>
+        <table>
+            <% created.forEach(element=>{%>
+            <tr>
+                <th>Connection Events</th>
+                <th>Category</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>
+                    <%= element.title%>
+                </td>
+                <td>
+                    <%= element.category%>
+                </td>
+                <td>
+                    <form class="updateButton" action="/connections/<%= element._id%>/update" method='GET'>
+                        <button style="width:50%">Update</button>
+                    </form>
+
+                    <form class="deleteButton" action="/connections/<%= element._id%>?_method=DELETE" method='POST'>
+                        <button style="width:50%">Delete</button>
+                    </form>
+
+                </td>
+
+            </tr>
+
+            <%});%>
+        </table>
+
+        <%}%>
+
+                <p>Your RSVP Details:</p>
+                <% if(saved.length > 0) { %>
+        <table class="savedConnections">
+            <tr>
+                <th>Connection Events</th>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+            <% saved.forEach(item => { %>
+            <tr>
+                <td><%= item.connections.title %></td>
+                <td><%= item.connections.category %></td>
+                <td><%= item.enrolled %></td>
+                <td>
+
+                    <form class="updateButton" action="/connections/<%= item.connections._id%>" method='GET'>
+                        <button style="width:50%">Edit</button>
+                    </form>
+                    <form class="deleteButton" action="/users/<%= item.connections._id%>?_method=DELETE" method='POST'>
+                        <button style="width:50%">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            <% }) %>
+        </table>
+
+        <%}%>
+            </main>
+            <%- include('../partials/footer.ejs')%>
+</body>
+
+</html>

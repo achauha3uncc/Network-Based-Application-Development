@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/style.css">
+
+    <meta charset="UTF-8">
+    <title> Welcome to Music Meetup Group!</title>
+    <!-- <script src="/connections.js"></script> -->
+</head>
+
+<body>
+
+    <%- include('../partials/header.ejs') %>
+    <div id="container">
+        <main>
+
+            <h2 id="category"><%= data.category%></h2>
+            <h2 id="title"><%= data.title%></h2>
+
+            <div class="connectionCard">
+                <img src='<%= data.imageURL%>' alt='<%= name%>'>
+
+                <p> Event Hosted by:  <%= data.host.firstName %></p>
+                <p> Starting Time: <%= data.startingTime %></p>
+                <p> Ending Time: <%= data.endingTime %></p>
+                <p> Details: <%= data.details%></p>
+                <p> Meet up Location: <%= data.location %></p>
+                <!-- <p> 3 people are Going. Are you going? </p> -->
+
+            </div>
+            <!-- <div class="connectionCard">
+                <img src="/<%= data.imageURL%>" alt="user">
+                <p>Find your favourite Merchandise here. Hurry! Offers are available for limited time period only.</p>
+            </div> -->
+            <div>
+
+                <%if (user!=null && data.host == user.id) {%>
+                <p id="q">Do you want to make any changes ?</p>
+                <form>
+                    <button type="submit" formmethod="GET"
+                        formaction="/connections/<%= data._id %>/update">Update</button>
+                    <button type="submit" formmethod="POST"
+                        formaction="/connections/<%= data._id%>?_method=DELETE">Delete</button>
+                </form>
+
+                <% }else {%>
+
+                <p id="q"><%=data.numberOfEnrollments%> are enrolled currently. Are you interested to join?</p>
+                <form action="/connections/<%= data._id %>/enrolledStatus" method="POST">
+                    <button type="submit" id="yes" name="yes" value="yes">Yes</button>
+                    <button type="submit" id="no" name="no" value="no">No</button>
+                    <button type="submit" id="maybe" name="maybe" value="maybe">Maybe</button>
+                </form>
+                <% } %>
+
+            </div>
+        </main>
+    </div>
+    <%- include('../partials/footer.ejs')%>
+</body>
+
+</html>

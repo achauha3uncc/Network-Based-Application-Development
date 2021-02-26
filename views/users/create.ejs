@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <title>
+        Sign Up
+    </title>
+</head>
+
+<body>
+    <%- include('../partials/header.ejs')%>
+    <%- include('../partials/nav.ejs')%>
+    <%- include('../partials/message.ejs')%>
+            <form action="/users" method="POST">
+                <label for="fName">First Name</label><br>
+                <input type="text" id="fName" name="firstName" required><br><br>
+                <label for="lName">Last Name</label><br>
+                <input type="text" id="lName" name="lastName" required><br><br>
+                <label for="email">Email</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="password">Password</label><br>
+                <input type="password" id="password" name="password"><br><br>
+                <button>Sign Up</button><br>
+            </form>
+    <%- include('../partials/footer.ejs')%>
+</body>
+</html>

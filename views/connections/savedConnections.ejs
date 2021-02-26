@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <title>
+        Profile
+    </title>
+</head>
+
+<body>
+    <%- include('../partials/header.ejs')%>
+        <%- include('../partials/nav.ejs')%>
+        <main>
+            <h3>Welcome
+                <%= user.name%>, here are your connections.
+            </h3>
+            <% if(connections.length > 0) {%>  
+                <table>
+                    <% connections.forEach(element=>{%>
+                 
+                    <th>Connection</th>
+                    <th>Category</th>
+                    <th>Action</th>
+                 
+                   <tr>
+                    <td>
+                        <a href="/connections/<%= element._id%>">
+                         <%= element.name%>
+                         <%= element.title%>  
+                        
+                        <td><%= element.category%> </td>
+                        <td>
+                        <form>
+                            <button type="submit" formmethod="GET" formaction="/connections/<%= element._id%>/update" style="width:50%">Update</button>
+                            <button type="submit" formmethod="POST" formaction="/connections/<%= element._id%>?_method=DELETE" style="width:50%">Delete</button></form>
+                        </td>        
+                    </td>
+                  </tr>
+                  <%});%>
+                </table>
+
+                <table>
+                
+                  <tr>
+                    <th>Connection</th>
+                    <th>Category</th>
+                    <th>Going</th>
+               
+                  </tr>
+                  <tr>
+                   <td>Rock Music Lovers</td>
+                   <td>Rock</td>
+        
+                     <td>
+                       <form action="savedConnections" method="get">
+                         <button type="submit" formaction="/connection/<%= item.connectionId %>" style="width:50%">Update</button>
+                         <button type="submit" formaction="savedConnections" style="width:50%">Delete</button></form>
+                     </td>
+                 </tr>
+                  <tr>
+                    <td>Rap Music Lovers</td>
+                    <td>Rap</td>
+                 
+                     <td>
+                       <form action="savedConnections" method="get">
+                         <button type="submit" formaction="/connection/<%= item.connectionId %>" style="width:50%">Update</button>
+                         <button type="submit" formaction="savedConnections" style="width:50%">Delete</button></form>
+                     </td>
+                  </tr>
+                  <tr>
+                    <td>Pop Music Lovers</td>
+                    <td>Pop</td>
+                    
+                     <td>
+                       <form action="savedConnections" method="get">
+                         <button type="submit" formaction="/connection/<%= item.connectionId %>" style="width:50%">Update</button>
+                         <button type="submit" formaction="savedConnections" style="width:50%">Delete</button></form>
+                     </td>
+                  </tr>
+                  <tr>
+                    <td>Alternative Rock Music Lovers</td>
+                    <td>Alternative Rock</td>
+               
+                     <td>
+                       <form action="savedConnections" method="get">
+                         <button type="submit"  formaction="/connection/<%= item.connectionId %>" style="width:50%">Update</button>
+                         <button type="submit" formaction="savedConnections" style="width:50%">Delete</button></form>
+                     </td>
+                  </tr>
+                 
+                </table>
+
+                <%}%>
+
+            </main>
+            <%- include('../partials/footer.ejs')%>
+</body>
+
+</html>

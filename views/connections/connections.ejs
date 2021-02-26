@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <title>
+        Connection Categories
+    </title>
+</head>
+
+<body>
+    <%- include('../partials/header.ejs')%>
+        <%- include('../partials/nav.ejs')%>
+            <% if(data.length > 0) {%>
+              <!-- <img src='<%= data.imageURL%>' alt='<%= name%>'> -->
+              <table>
+                  <tr>
+                      <th> Meetup Groups </th>
+                  </tr>
+                  <% data.forEach(element=>{%>
+                    <tr>
+                        <td>
+                            <a href="/connections/<%= element._id%>">
+                                <%= element.category%>
+                            </a><br>
+                        </td>
+                    </tr>
+                    <%});%>
+              </table>
+                <%};%>
+                    <%- include('../partials/footer.ejs')%>
+</body>
+</html>
+

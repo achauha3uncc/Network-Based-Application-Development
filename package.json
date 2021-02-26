@@ -1,0 +1,28 @@
+{
+  "name": "chauhanaakankshaassignment1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "connect-flash": "^0.1.1",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.8.0",
+    "flash": "^1.1.0",
+    "js-datepicker": "^5.16.0",
+    "lodash": "^4.17.20",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.10.16",
+    "mongoose-timestamp": "^0.6.0",
+    "node-calendar": "^0.1.5",
+    "nodemon": "^2.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

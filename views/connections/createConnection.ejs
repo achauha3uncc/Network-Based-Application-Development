@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <title>
+        Create Connections
+    </title>
+</head>
+
+<body>
+    <%- include('../partials/header.ejs')%>
+    <%- include('../partials/nav.ejs')%>
+    <%- include('../partials/message.ejs')%>
+    <form action="/connections" method="POST">
+        <label for="title">Connection Name</label><br>
+        <input type="text" id="title" name="title" required><br><br>
+        <label for="category">Category</label><br>
+        <input type="text" id="category" name="category" required><br><br>
+        <label for="details">Details</label><br>
+        <textarea id="details" name="details" rows="3" columns="40"></textarea><br><br>
+        <label for="date">date</label><br>
+        <input type="date" id="date" name="date" required><br><br>
+        <label for="startingTime">startingTime</label><br>
+        <input type="time" id="startingTime" name="startingTime" required><br><br>
+        <label for="endingTime">endingTime</label><br>
+        <input type="time" id="endingTime" name="endingTime" required><br><br>
+        <label for="location">Location</label><br>
+        <input type="text" id="location" name="location" required><br><br>
+        <label for="host">Host</label><br>
+        <input type="text" id="host" name="host"><br><br>
+        <label for="imageURL">Image URL</label><br>
+        <input type="text" id="imageURL" name="imageURL"><br><br>
+        <button>Submit</button><br>
+    </form>
+
+    <%- include('../partials/footer.ejs')%>
+    <script>var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1; //January is 0!
+        var yyyy = today.getFullYear();
+        if (dd < 10) {
+            dd = '0' + dd
+        }
+        if (mm < 10) {
+            mm = '0' + mm
+        }
+
+        today = yyyy + '-' + mm + '-' + dd;
+        document.getElementById("date").setAttribute("min", today);
+        var startTime = document.getElementById("startingTime");
+        startTime.addEventListener("input", function () {
+        document.getElementById("endingTime").setAttribute("min", startTime.value);
+        }, false);
+    </script>
+</body>
+
+</html>

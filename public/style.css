@@ -1,0 +1,619 @@
+body,
+h3 {
+  margin: 0;
+}
+
+header {
+  color: white;
+  background-color: rgb(6, 170, 199);
+  text-align: center;
+  width: 100%;
+  height: 150px;
+  position: relative;
+}
+
+main{
+position: relative;
+}
+
+main .active {
+position: relative;
+left: 100px;
+}
+
+.active:hover {
+  cursor: pointer;
+  color: rgb(6, 170, 199);
+}
+h2 .connectionName{
+  margin: 0 0 0;
+}
+
+.connectionCard{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* max-width: 250px; */
+  width:350px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  position: relative;
+  right: 0%;
+  /* top: 240px; */
+}
+
+.connectionCard >*{
+  width:350px;
+  position: relative;
+  width:inherit;
+}
+#conButton{
+  display: inline-block;
+  color: black;
+  background-color: transparent;
+  width: 250px;
+}
+#conButton:hover{
+
+  color:grey;
+  scale: 1.2;
+}
+
+#q{
+  text-align:center;
+  color: rgb(6, 170, 199);
+  font-size: larger;
+
+}
+
+footer {
+  background-color: rgb(6, 170, 199);
+  border: 3px solid black;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  position: relative;
+  text-align: center;
+}
+.fbutton {
+  padding: 0 0 0;
+  margin: 0 0 0;
+  background-color: rgb(6, 170, 199);
+  width: 100px;
+  /* border: none; */
+  color: black;
+  /* padding: 12px 30px; */
+  cursor: pointer;
+  font-size: 20px;
+  /* text-align: right; */
+  display: inline-block;
+}
+.fbutton:hover {
+  color:grey;
+}
+.fp {
+  padding: 0 0 0;
+  margin: 0 0 0;
+  background-color: rgb(6, 170, 199);
+  width: 500px;
+  /* border: none; */
+  color: black;
+  /* padding: 12px 30px; */
+  cursor: pointer;
+  font-size: 20px;
+  /* text-align: right; */
+  display: inline-block;
+}
+
+.success {
+  background: rgba(108, 192, 112, 0.7);
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 10px 10px;
+}
+
+.error {
+  background: rgba(255, 102, 51, 0.7);
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 10px 10px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  /* float: right; */
+  left: 10px;
+  position: relative;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+#btnsection {
+  float: left;
+  padding-left: 30px;
+}
+/* .footer {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color:#333;
+color: white;
+text-align: center;
+} */
+.logo-image {
+  position: left;
+  margin: 0px;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+p.impact {
+  font-family: Impact, Charcoal, sans-serif;
+}
+.btn {
+  background-color: rgb(6, 170, 199);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+  text-align: left;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+.footer2 {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+.logo-image {
+  position: left;
+  width: 80px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.btn {
+  background-color: rgb(41, 10, 10);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+  text-align: left;
+}
+.btn:hover {
+  background-color: rgb(57, 60, 66);
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 250px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  position: absolute;
+  right: 0%;
+  top: 240px;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: black;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 40%;
+  font-size: 18px;
+}
+
+.button3 {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: display-box;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 20%;
+}
+
+.button1 {
+  background-color: #4caf50;
+} /* Green */
+.button2 {
+  background-color: #008cba;
+} /* Blue */
+.button3 {
+  background-color: #008cba;
+} /* Blue */
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: white;
+}
+
+button:hover,
+a:hover {
+  opacity: 0.7;
+}
+.btn3 {
+  position: relative;
+}
+.btn2 {
+  background-color: rgb(41, 10, 10);
+  border: none;
+  color: black;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+  text-align: right;
+  display: inline-block;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+/* .footer {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color:#333;
+color: white;
+text-align: center;
+} */
+.logo-image {
+  width: 80px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: left;
+  top: 0;
+  left: 0;
+}
+.btn {
+  background-color: rgb(6, 170, 199);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+  text-align: left;
+}
+.btn:hover {
+  background-color: rgb(57, 60, 66);
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: black;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: white;
+}
+
+button:hover,
+a:hover {
+  opacity: 0.7;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+/* .footer {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color:#333;
+color: white;
+text-align: center;
+} */
+.logo-image {
+  width: 80px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: left;
+}
+.btn {
+  background-color: rgb(6, 170, 199);
+  border: none;
+  color: black;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+  text-align: left;
+}
+.btn:hover {
+  background-color: rgb(6, 170, 199);
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover,
+a:hover {
+  opacity: 0.7;
+}
+.btn2 {
+  background-color: rgb(6, 170, 199);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+  text-align: right;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid black;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid rgb(99, 89, 73);
+  border-top: 1px solid black;
+  border: 1px solid black;
+}
+
+.button3 {
+  border: none;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 15%;
+}
+.button3 {
+  background-color: #008cba;
+  border-radius: 8px;
+  margin-bottom: auto;
+} /* Blue */
+tr:hover {
+  background-color: #f5f5f5;
+}
+.button4 {
+  background-color: #1b7a46;
+  border-radius: 8px;
+  margin-bottom: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style the navbar */
+.topnav {
+  display: inline-block;
+  overflow: hidden;
+  display: block;
+  background-color: #e9e9e9;
+  width: 100%;
+}
+
+/* Navbar links */
+.topnav a {
+  float: right;
+  display: block;
+  color: white;
+  text-align: justify;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  width: 100%;
+}
+
+/* Navbar links on mouse-over */
+.topnav a:hover {
+  background-color: #ddd;
+  color: white;
+}
+
+/* Active/current link */
+.topnav a.active {
+  background-color: rgb(41, 10, 10);
+  color: white;
+}
+
+/* Style the input container */
+.topnav .login-container {
+  float: right;
+}
+
+/* Style the input field inside the navbar */
+.topnav input[type="text"] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width: 100%; /* adjust as needed (as long as it doesn't break the topnav) */
+}
+
+/* Style the button inside the input container */
+.topnav .login-container button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .login-container button:hover {
+  background: #ccc;
+}
+
+/* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+  .topnav .login-container {
+    float: none;
+  }
+  .topnav a,
+  .topnav input[type="text"],
+  .topnav .login-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type="text"] {
+    border: 1px solid #ccc;
+  }
+}
